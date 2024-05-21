@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
+
 import React from "react";
 
 export const product = [
@@ -93,8 +94,6 @@ export const product = [
 
 const Page = () => {
   const router = useRouter();
-
-  const pathname = usePathname();
   const handleSingleProductPage = (id: string, img: string, name: string) => {
     router.push(`/products/${id}`);
   };
@@ -116,25 +115,13 @@ const Page = () => {
               key={item.id}
               className="text-center relative group"
             >
-              <Link
-                href={{
-                  pathname: `/products/${item.id}`,
-                  query: {
-                    id: item.id,
-                    img: item.img,
-                    name: item.name,
-                  },
-                }}
-                as={`/products/${item.id}`}
-              >
-                <Image
-                  src={item.img}
-                  width={400}
-                  height={400}
-                  alt={item.name}
-                  className="group-hover:hidden"
-                />
-              </Link>
+              <Image
+                src={item.img}
+                width={400}
+                height={400}
+                alt={item.name}
+                className="group-hover:hidden"
+              />
 
               <Image
                 src={item.hoverImg}
