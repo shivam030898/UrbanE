@@ -45,7 +45,7 @@ const Collection = () => {
   return (
     <div>
       <h1 className="text-4xl font-medium text-white text-center mt-6 pt-6">
-        Explore a Selection of the Maison's Creations
+        Explore a Selection of the Maison Creations
       </h1>
       <div className="flex justify-center pt-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-7 mt-4">

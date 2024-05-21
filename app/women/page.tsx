@@ -101,7 +101,7 @@ const Page = () => {
   return (
     <div className="flex flex-col items-center gap-3">
       <h1 className="text-4xl font-bold text-white mt-4 pt-5 uppercase ">
-        Women's Collection
+        Women Collection
       </h1>
       <span className="text-gray-500 font-normal text-md">
         All our collection
@@ -146,7 +146,7 @@ const Page = () => {
 
               <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start">
                 <p className="text-white">{item.name}</p>
-                <p className="text-white">Rs 20,000</p>
+                <p className="text-white">Rs 20000</p>
               </div>
             </div>
           ))}

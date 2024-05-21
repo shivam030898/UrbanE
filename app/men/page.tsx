@@ -100,6 +100,12 @@ const Page = () => {
   };
   return (
     <div className="flex flex-col items-center gap-3">
+      <h1 className="text-4xl font-bold text-white mt-4 pt-5 uppercase ">
+        Men Collection
+      </h1>
+      <span className="text-gray-500 font-normal text-md">
+        All our collection
+      </span>
       <div className="w-full flex justify-center pt-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
           {product.map((item) => (

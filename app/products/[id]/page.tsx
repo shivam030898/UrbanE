@@ -88,21 +88,20 @@ const Page = () => {
           <AccordionItem value="item-1">
             <AccordionTrigger>Description & Fit</AccordionTrigger>
             <AccordionContent>
-              Short-sleeved shirt in soft cotton twill with a resort collar,
+              Short-sleeved shirt in soft cotton twill with a resort collar
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger>Material</AccordionTrigger>
             <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
+              Yes It comes with default styles that matches the other
+              components&apos; aesthetic
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger>Care</AccordionTrigger>
             <AccordionContent>
-              Yes. It's animated by default, but you can disable it if you
-              prefer.
+              Yes Its animated by default but you can disable it if you prefer
             </AccordionContent>
           </AccordionItem>
         </Accordion>
