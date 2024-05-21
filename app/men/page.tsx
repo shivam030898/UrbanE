@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 import React from "react";
 
-export const product = [
+export const productCute = [
   {
     id: "1",
     img: "https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F45%2Fed%2F45ed500d94d6a629a5e22fc92af6b72e7aff6088.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D",
@@ -94,7 +94,7 @@ export const product = [
 
 const Page = () => {
   const router = useRouter();
-  const handleSingleProductPage = (id: string, img: string, name: string) => {
+  const handleSingleProductPage = () => {
     router.push(`/products`);
   };
   return (
@@ -107,15 +107,10 @@ const Page = () => {
       </span>
       <div className="w-full flex justify-center pt-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
-          {product.map((item) => (
-            <div
-              onClick={() =>
-                handleSingleProductPage(item.id, item.img, item.name)
-              }
-              key={item.id}
-              className="text-center relative group"
-            >
+          {productCute.map((item) => (
+            <div key={item.id} className="text-center relative group">
               <Image
+                onClick={handleSingleProductPage}
                 src={item.img}
                 width={400}
                 height={400}
