@@ -96,7 +96,7 @@ const Page = () => {
 
   const pathname = usePathname();
   const handleSingleProductPage = (id: string, img: string, name: string) => {
-    router.push(`/products/${id}`);
+    router.push(`/products}`);
   };
   return (
     <div className="flex flex-col items-center gap-3">
