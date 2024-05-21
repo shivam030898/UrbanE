@@ -95,7 +95,7 @@ const Page = () => {
   const router = useRouter();
 
   const pathname = usePathname();
-  const handleSingleProductPage = (id: string, img: string, name: string) => {
+  const handleSingleProductPage = () => {
     router.push(`/products`);
   };
   return (
@@ -110,31 +110,17 @@ const Page = () => {
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
           {product.map((item) => (
             <div
-              onClick={() =>
-                handleSingleProductPage(item.id, item.img, item.name)
-              }
+              onClick={() => handleSingleProductPage}
               key={item.id}
               className="text-center relative group"
             >
-              <Link
-                href={{
-                  pathname: `/products/${item.id}`,
-                  query: {
-                    id: item.id,
-                    img: item.img,
-                    name: item.name,
-                  },
-                }}
-                as={`/products/${item.id}`}
-              >
-                <Image
-                  src={item.img}
-                  width={400}
-                  height={400}
-                  alt={item.name}
-                  className="group-hover:hidden"
-                />
-              </Link>
+              <Image
+                src={item.img}
+                width={400}
+                height={400}
+                alt={item.name}
+                className="group-hover:hidden"
+              />
 
               <Image
                 src={item.hoverImg}
