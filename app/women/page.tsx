@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React from "react";
 
-export const product = [
+const womenProduct = [
   {
     id: "1",
     img: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F68%2F3b%2F683b4bfe0975246d4483476eeb7d5641dc94b953.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
@@ -93,8 +92,6 @@ export const product = [
 
 const Page = () => {
   const router = useRouter();
-
-  const pathname = usePathname();
   const handleSingleProductPage = () => {
     router.push(`/products`);
   };
@@ -108,9 +105,9 @@ const Page = () => {
       </span>
       <div className="w-full flex justify-center pt-3 p-4">
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
-          {product.map((item) => (
+          {womenProduct.map((item) => (
             <div
-              onClick={() => handleSingleProductPage}
+              onClick={handleSingleProductPage}
               key={item.id}
               className="text-center relative group"
             >
